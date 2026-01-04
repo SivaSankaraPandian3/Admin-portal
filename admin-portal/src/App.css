@@ -1,43 +1,19 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  background: #f8f9fa;
-}
-
-/* MAIN LAYOUT WRAPPER */
 .layout {
   display: flex;
-  height: 100vh;
   width: 100%;
-  overflow: hidden;
-}
-
-/* CONTENT NEXT TO SIDEBAR */
-.content-wrapper {
-  flex: 1;
-  height: 100vh;
-  overflow-y: auto;
-  padding: 30px 40px;
-  background: #f8f9fa;
-
-  /* >>>> THE MOST IMPORTANT LINE <<<< */
-  margin-left: 0px;
-
-  transition: margin-left 0.3s ease;
-}
-
-/* WHEN SIDEBAR COLLAPSES */
-.layout.sidebar-collapsed .content-wrapper {
-  margin-left: 85px !important;
 }
 
 .content {
-  width: 100%;
-  margin: 0;
+  flex: 1;
+  margin-left: 280px;
+  /* Width of the sidebar */
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 280px);
+}
+
+/* When sidebar is collapsed */
+.layout.sidebar-collapsed .content {
+  margin-left: 85px;
+  /* Collapsed width */
+  width: calc(100% - 85px);
 }
