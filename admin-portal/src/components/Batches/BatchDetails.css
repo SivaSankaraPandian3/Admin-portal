@@ -1,0 +1,272 @@
+.batch-details-page {
+    padding: 40px;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.batch-details-header h1 {
+    font-size: 32px;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Batch Info Card */
+.batch-info-card {
+    background: white;
+    border-radius: 24px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    margin-bottom: 30px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.course-title-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.course-book-icon {
+    font-size: 32px;
+    color: #10a358;
+}
+
+.title-texts h2 {
+    font-size: 24px;
+    color: #111;
+    margin: 0;
+    font-weight: 600;
+}
+
+.title-texts span {
+    color: #888;
+    font-size: 14px;
+}
+
+.join-class-btn {
+    background-color: #10a358;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.join-class-btn:hover {
+    background-color: #0d8c4b;
+}
+
+.cam-icon {
+    font-size: 20px;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.user-icon {
+    background-color: #f0fdf4;
+    color: #10a358;
+}
+
+.calendar-icon {
+    background-color: #f0fdf4;
+    color: #10a358;
+}
+
+.timer-icon {
+    background-color: #f0fdf4;
+    color: #10a358;
+}
+
+.time-icon {
+    background-color: #f0fdf4;
+    color: #10a358;
+}
+
+.students-icon {
+    background-color: #f0fdf4;
+    color: #10a358;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 13px;
+    color: #999;
+}
+
+.info-value {
+    font-size: 16px;
+    color: #111;
+    font-weight: 500;
+}
+
+/* Attendance Section */
+.attendance-container {
+    background: white;
+    border-radius: 24px;
+    padding: 30px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.attendance-header {
+    padding: 0 40px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #3b82f6;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.attendance-header span {
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.cal-note-icon {
+    font-size: 20px;
+    color: #666;
+}
+
+.attendance-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attendance-table th {
+    text-align: left;
+    padding: 20px 40px;
+    color: #999;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #fafafa;
+}
+
+.attendance-table td {
+    padding: 16px 40px;
+    border-bottom: 1px solid #f9f9f9;
+    color: #666;
+    font-size: 15px;
+}
+
+.attendance-badge {
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+
+.status-ontime {
+    background-color: #064e3b;
+    color: white;
+}
+
+.status-early {
+    background-color: #10b981;
+    color: white;
+}
+
+.status-late {
+    background-color: #f97316;
+    color: white;
+}
+
+.status-noshow {
+    background-color: #9ca3af;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .batch-details-page {
+        padding: 20px;
+    }
+
+    .card-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .join-class-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .attendance-table th,
+    .attendance-table td {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .batch-details-header h1 {
+        font-size: 24px;
+    }
+
+    .title-texts h2 {
+        font-size: 20px;
+    }
+
+    .batch-info-card {
+        padding: 20px;
+    }
+}

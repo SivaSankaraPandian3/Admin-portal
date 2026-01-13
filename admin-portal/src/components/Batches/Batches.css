@@ -137,12 +137,7 @@
     flex-direction: column;
 }
 
-.view-more {
-    font-size: 11px;
-    color: #3b82f6;
-    cursor: pointer;
-    margin-top: 4px;
-}
+/* Removed .view-more text styles */
 
 .instructor-cell {
     display: flex;
@@ -206,15 +201,45 @@
     background-color: #ef4444;
 }
 
-.delete-icon {
+.actions-cell {
+    min-width: 100px;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: flex-start;
+}
+
+.action-icon {
+    font-size: 20px;
     color: #bbb;
     cursor: pointer;
-    font-size: 18px;
-    transition: color 0.2s;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-icon:hover {
+    color: #3b82f6;
+    transform: scale(1.1);
 }
 
 .delete-icon:hover {
     color: #ef4444;
+    transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    .action-buttons {
+        gap: 12px;
+    }
+
+    .action-icon {
+        font-size: 18px;
+    }
 }
 
 .batches-pagination {

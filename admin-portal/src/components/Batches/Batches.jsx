@@ -1,27 +1,20 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Batches.css";
 import "../Modal.css";
-import { FaTrash } from "react-icons/fa";
-import { MdFilterList } from "react-icons/md";
+import { MdFilterList, MdGridView, MdDeleteOutline } from "react-icons/md";
+
+import { batchesData } from "./batchesData";
 
 const Batches = () => {
-    const [batches, setBatches] = useState([
-        { id: 1, name: "FSD-March Morning", student: "Alice Johnson", students: ["Alice Johnson"], instructor: "David Miller", initials: "DM", status: "Active" },
-        { id: 2, name: "FSD-March Morning", student: "Alice Johnson", students: ["Alice Johnson"], instructor: "David Miller", initials: "DM", status: "Completed" },
-        { id: 3, name: "FSD-March Morning", student: "Alice Johnson", students: ["Alice Johnson"], instructor: "David Miller", initials: "DM", status: "Active" },
-        { id: 4, name: "FSD-March Morning", student: "Alice Johnson", students: ["Alice Johnson"], instructor: "David Miller", initials: "DM", status: "Active" },
-        { id: 5, name: "FSD-March Morning", student: "Alice Johnson", students: ["Alice Johnson"], instructor: "David Miller", initials: "DM", status: "Completed" },
-        { id: 6, name: "FSD-March Morning", student: "Alice Johnson", students: ["Alice Johnson"], instructor: "David Miller", initials: "DM", status: "Active" },
-        { id: 7, name: "FSD-March Morning", student: "Alice Johnson", students: ["Alice Johnson"], instructor: "David Miller", initials: "DM", status: "Active" },
-        { id: 8, name: "FSD-March Morning", student: "Alice Johnson", students: ["Alice Johnson", "Mark Refalo", "Sarah Smith"], instructor: "David Miller", initials: "DM", status: "Inactive", showViewMore: true },
-        { id: 9, name: "FSD-March Morning", student: "Alice Johnson", students: ["Alice Johnson", "Bob Wilson"], instructor: "David Miller", initials: "DM", status: "Inactive", showViewMore: true },
-    ]);
+    const navigate = useNavigate();
+    const [batches, setBatches] = useState(batchesData);
 
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedBatch, setSelectedBatch] = useState(null);
     const [showModal, setShowModal] = useState(false);
     const [filterStatus, setFilterStatus] = useState("All");
-    const itemsPerPage = 3;
+    const itemsPerPage = 10;
 
     const filteredBatches = batches.filter(batch =>
         filterStatus === "All" || batch.status === filterStatus
@@ -110,11 +103,6 @@ const Batches = () => {
                                     <td>
                                         <div className="batch-name-cell">
                                             {batch.name}
-                                            {batch.showViewMore && (
-                                                <span className="view-more" onClick={() => handleViewMore(batch)}>
-                                                    View more
-                                                </span>
-                                            )}
                                         </div>
                                     </td>
                                     <td>{batch.student}</td>
@@ -130,8 +118,14 @@ const Batches = () => {
                                             {batch.status}
                                         </span>
                                     </td>
-                                    <td>
-                                        <FaTrash className="delete-icon" />
+                                    <td className="actions-cell">
+                                        <div className="action-buttons">
+                                            <MdGridView
+                                                className="action-icon view-icon"
+                                                onClick={() => navigate(`/dashboard/batch-details/${batch.id}`)}
+                                            />
+                                            <MdDeleteOutline className="action-icon delete-icon" />
+                                        </div>
                                     </td>
                                 </tr>
                             ))}

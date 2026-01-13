@@ -17,6 +17,7 @@ import CourseView from "./components/CourseIcon/CourseView.jsx";
 import EditCourse from "./components/CourseIcon/EditCourse.jsx";
 import CourseUsers from "./components/CourseIcon/CourseUsers.jsx";
 import Batches from "./components/Batches/Batches";
+import BatchDetails from "./components/Batches/BatchDetails";
 
 // AUTH COMPONENTS
 import SignIn from "./components/Sign/SignIn";
@@ -69,6 +70,7 @@ export default function App() {
                     <Route path="add-student" element={<UserEnrollment subtitle="Add Student" />} />
                     <Route path="student-preview" element={<StudentPreview />} />
                     <Route path="batches" element={<Batches />} />
+                    <Route path="batch-details/:id" element={<BatchDetails />} />
                     <Route path="instructor-preview" element={<InstructorPreview />} />
                   </Routes>
                 </div>
