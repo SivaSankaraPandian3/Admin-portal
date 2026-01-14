@@ -13,6 +13,7 @@ import CourseBuilder from "./components/CourseBuilder/CourseBuilder";
 import CreateCourse from "./components/CreateCourse/CreateCourse";
 import StudentPreview from "./components/Student/StudentPreview";
 import InstructorPreview from "./components/Instructor/InstructorPreview";
+import InstructorBatches from "./components/Instructor/InstructorBatches";
 import CourseView from "./components/CourseIcon/CourseView.jsx";
 import EditCourse from "./components/CourseIcon/EditCourse.jsx";
 import CourseUsers from "./components/CourseIcon/CourseUsers.jsx";
@@ -72,6 +73,7 @@ export default function App() {
                     <Route path="batches" element={<Batches />} />
                     <Route path="batch-details/:id" element={<BatchDetails />} />
                     <Route path="instructor-preview" element={<InstructorPreview />} />
+                    <Route path="instructor-batches" element={<InstructorBatches />} />
                   </Routes>
                 </div>
               </div>

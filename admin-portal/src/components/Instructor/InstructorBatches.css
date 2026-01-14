@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.instructor-batches-page {
+    font-family: "Poppins", sans-serif;
+    padding: 60px 80px;
+    background: #EBEBEB;
+    min-height: 100vh;
+    /* Fix layout shift (jerk) by reserving space for scrollbar explicitly */
+    scrollbar-gutter: stable;
+    overflow-y: auto;
+}
+
+/* Hide main page scrollbar strictly visual if requested */
+.instructor-batches-page::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.ib-header {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.ib-header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #555555;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.ib-back-btn {
+    background: white;
+    border: 1px solid #E0E0E0;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 20px;
+    color: #333;
+    font-size: 20px;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.ib-back-btn:hover {
+    background: #f5f5f5;
+    border-color: #ccc;
+    transform: translateX(-2px);
+}
+
+/* Batch Card */
+.ib-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ib-card:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+}
+
+.ib-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ib-batch-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ib-batch-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444444;
+    margin: 0;
+}
+
+.ib-batch-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #999999;
+}
+
+.meta-icon {
+    font-size: 16px;
+    color: #0FA958;
+}
+
+.meta-dot {
+    margin: 0 2px;
+}
+
+.ib-show-details-btn {
+    background: #0FA958;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.ib-show-details-btn:hover {
+    background: #0d8a47;
+    padding-right: 28px;
+}
+
+.ib-show-details-btn .arrow {
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+/* Expanded Content */
+.ib-expanded-content {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #EEEEEE;
+}
+
+/* Stats Row */
+.ib-stats-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.ib-stat-box {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 140px;
+    box-shadow: none;
+}
+
+.ib-stat-label {
+    font-size: 11px;
+    color: #666;
+    font-weight: 500;
+}
+
+.ib-stat-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0FA958;
+}
+
+.ib-month-selector {
+    margin-left: auto;
+    position: relative;
+}
+
+.ib-month-selector select {
+    appearance: none;
+    background: white;
+    border: 1px solid #DDDDDD;
+    border-radius: 20px;
+    padding: 8px 36px 8px 16px;
+    font-size: 13px;
+    color: #666666;
+    cursor: pointer;
+    min-width: 120px;
+    font-family: "Poppins", sans-serif;
+}
+
+.ib-month-selector select:focus {
+    outline: none;
+    border-color: #0FA958;
+}
+
+.ib-month-selector .dropdown-arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #999999;
+    font-size: 10px;
+}
+
+/* Table */
+.ib-table-container {
+    overflow-x: auto;
+    background: white;
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #D1D5DB transparent;
+}
+
+.ib-table-container::-webkit-scrollbar {
+    display: block;
+    width: 6px;
+    height: 6px;
+}
+
+.ib-table-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ib-table-container::-webkit-scrollbar-thumb {
+    background: #D1D5DB;
+    border-radius: 3px;
+    border: 1px solid white;
+}
+
+.ib-table-container::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF;
+}
+
+.ib-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.ib-table thead th {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    color: #999999;
+    padding: 12px 16px;
+    border-bottom: 1px solid #F0F0F0;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.ib-table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.ib-table tbody tr:hover {
+    background-color: #FAFAFA;
+}
+
+.ib-table tbody td {
+    padding: 18px 16px;
+    font-size: 13px;
+    color: #444;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.ib-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.ib-table tbody td:first-child {
+    color: #333333;
+    font-weight: 500;
+}
+
+.date-cell,
+.time-cell,
+.students-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+}
+
+.cell-icon {
+    color: #BDBDBD;
+    font-size: 17px;
+}
+
+/* Badge Styling Refinement - Left Alignment */
+.ib-attendance-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align Left */
+    gap: 12px;
+    /* Consistent gap */
+    padding: 8px 0 8px 24px;
+    /* Fixed Left Padding to place dot */
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 110px;
+    width: 110px;
+}
+
+.badge-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: transparent;
+}
+
+/* On Time - Clean Green */
+.status-ontime {
+    background-color: #E8F5E9 !important;
+    color: #1B5E20 !important;
+}
+
+.status-ontime .badge-dot {
+    background-color: #43A047 !important;
+}
+
+/* Late - Distinct Orange */
+.status-late {
+    background-color: #FFF3E0 !important;
+    color: #E65100 !important;
+}
+
+.status-late .badge-dot {
+    background-color: #FB8C00 !important;
+}
+
+/* Early - Blue */
+.status-early {
+    background-color: #E3F2FD !important;
+    color: #0D47A1 !important;
+}
+
+.status-early .badge-dot {
+    background-color: #2196F3 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .instructor-batches-page {
+        padding: 20px;
+    }
+
+    .ib-stats-row {
+        flex-wrap: wrap;
+    }
+
+    .ib-stat-box {
+        flex: 1 1 45%;
+    }
+
+    .ib-month-selector {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .ib-month-selector select {
+        width: 100%;
+    }
+}

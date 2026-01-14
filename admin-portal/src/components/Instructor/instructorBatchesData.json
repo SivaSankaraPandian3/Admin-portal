@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "batchName": "React Fundamentals - Batch A",
+        "startDate": "Jan 15, 2024",
+        "sessions": 3,
+        "stats": {
+            "totalDays": 60,
+            "daysCompleted": 10,
+            "leaveTaken": 2
+        },
+        "details": [
+            {
+                "batchName": "React Fundamentals",
+                "classDate": "Jan 15, 2024",
+                "time": "09:00 AM - 12:00 PM",
+                "students": "16/20",
+                "attendanceStatus": "On Time"
+            },
+            {
+                "batchName": "React Fundamentals",
+                "classDate": "Jan 17, 2024",
+                "time": "09:00 AM - 12:00 PM",
+                "students": "20/20",
+                "attendanceStatus": "Late"
+            },
+            {
+                "batchName": "React Fundamentals",
+                "classDate": "Jan 19, 2024",
+                "time": "09:00 AM - 12:00 PM",
+                "students": "20/20",
+                "attendanceStatus": "On Time"
+            },
+            {
+                "batchName": "React Fundamentals",
+                "classDate": "Jan 15, 2024",
+                "time": "09:00 AM - 12:00 PM",
+                "students": "20/20",
+                "attendanceStatus": "On Time"
+            },
+            {
+                "batchName": "React Fundamentals",
+                "classDate": "Jan 17, 2024",
+                "time": "09:00 AM - 12:00 PM",
+                "students": "20/20",
+                "attendanceStatus": "Late"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "batchName": "UI/UX ( Figma )",
+        "startDate": "Jan 15, 2024",
+        "sessions": 3,
+        "stats": {
+            "totalDays": 45,
+            "daysCompleted": 5,
+            "leaveTaken": 2
+        },
+        "details": [
+            {
+                "batchName": "UI/UX ( Figma )",
+                "classDate": "Jan 15, 2024",
+                "time": "09:00 AM - 12:00 PM",
+                "students": "16/20",
+                "attendanceStatus": "On Time"
+            },
+            {
+                "batchName": "UI/UX ( Figma )",
+                "classDate": "Jan 17, 2024",
+                "time": "09:00 AM - 12:00 PM",
+                "students": "20/20",
+                "attendanceStatus": "Late"
+            },
+            {
+                "batchName": "UI/UX ( Figma )",
+                "classDate": "Jan 19, 2024",
+                "time": "09:00 AM - 12:00 PM",
+                "students": "18/20",
+                "attendanceStatus": "On Time"
+            },
+            {
+                "batchName": "UI/UX ( Figma )",
+                "classDate": "Jan 21, 2024",
+                "time": "09:00 AM - 12:00 PM",
+                "students": "19/20",
+                "attendanceStatus": "On Time"
+            },
+            {
+                "batchName": "UI/UX ( Figma )",
+                "classDate": "Jan 23, 2024",
+                "time": "09:00 AM - 12:00 PM",
+                "students": "15/20",
+                "attendanceStatus": "Late"
+            }
+        ]
+    }
+]

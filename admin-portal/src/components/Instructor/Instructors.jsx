@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Instructors.css";
-import { FaTrash, FaEdit, FaEye } from "react-icons/fa";
+import { FaTrash, FaEdit, FaEye, FaRegFolderOpen } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Instructors = () => {
@@ -83,6 +83,10 @@ const Instructors = () => {
                 </td>
 
                 <td className="actions">
+                  <FaRegFolderOpen
+                    className="icon folder"
+                    onClick={() => navigate("/dashboard/instructor-batches", { state: { instructor: item, title: "Instructor Management" } })}
+                  />
                   <FaTrash className="icon delete" />
                   <FaEdit
                     className="icon edit"
