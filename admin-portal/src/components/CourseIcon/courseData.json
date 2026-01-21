@@ -1,0 +1,85 @@
+{
+    "availableInstructors": [
+        {
+            "id": "1",
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        {
+            "id": "2",
+            "name": "Jane Smith",
+            "email": "jane@example.com"
+        },
+        {
+            "id": "3",
+            "name": "Pushparaj",
+            "email": "pushparajraje52141@gmail.com"
+        },
+        {
+            "id": "4",
+            "name": "Savitha J",
+            "email": "savitha.saviy@gmail.com"
+        }
+    ],
+    "courseDetails": {
+        "title": "RPA",
+        "courseId": "CRS-RPA-001",
+        "lessonsCount": 4,
+        "progress": 65,
+        "description": "Learn robotic process automation from scratch.",
+        "duration": "40",
+        "instructor": "John Doe",
+        "modules": [
+            {
+                "id": 0,
+                "name": "Module - 1",
+                "sections": [
+                    {
+                        "name": "Section - 1",
+                        "notes": "Basic concepts.",
+                        "videos": [
+                            "https://youtu.be/example1"
+                        ]
+                    },
+                    {
+                        "name": "Section - 2",
+                        "notes": "Overview of RPA tools."
+                    },
+                    {
+                        "name": "Section - 3"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "name": "Module - 2",
+                "sections": [
+                    {
+                        "name": "Section - 1"
+                    },
+                    {
+                        "name": "Section - 2"
+                    },
+                    {
+                        "name": "Section - 3"
+                    },
+                    {
+                        "name": "Section - 4"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Module - 3",
+                "sections": [
+                    {
+                        "name": "Section - 1"
+                    },
+                    {
+                        "name": "Section - 2"
+                    }
+                ]
+            }
+        ]
+    }
+}

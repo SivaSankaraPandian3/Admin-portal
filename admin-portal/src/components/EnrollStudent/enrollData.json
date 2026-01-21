@@ -1,0 +1,40 @@
+{
+    "students": [
+        {
+            "id": "student1",
+            "name": "Student 1"
+        },
+        {
+            "id": "student2",
+            "name": "Student 2"
+        }
+    ],
+    "courses": [
+        {
+            "id": "react",
+            "name": "React"
+        },
+        {
+            "id": "node",
+            "name": "Node.js"
+        },
+        {
+            "id": "python",
+            "name": "Python"
+        }
+    ],
+    "instructors": [
+        {
+            "id": "john",
+            "name": "John Doe"
+        },
+        {
+            "id": "jane",
+            "name": "Jane Smith"
+        }
+    ],
+    "initialBatches": [
+        "Batch A",
+        "Batch B"
+    ]
+}

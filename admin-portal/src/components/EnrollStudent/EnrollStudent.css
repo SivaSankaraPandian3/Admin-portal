@@ -1,0 +1,439 @@
+/* Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --page-bg: #f1f2f3;
+  --card-bg: #ffffff;
+  --muted: #6b7175;
+  --border: #e7e8ea;
+  --green: #0b8040;
+  --shadow: rgba(20, 24, 26, 0.06);
+}
+
+/* base */
+* {
+  box-sizing: border-box;
+}
+
+.enroll-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: var(--page-bg);
+  overflow: hidden;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* the card */
+.enroll-card {
+  width: 100%;
+  max-width: 1100px;
+  background: linear-gradient(180deg, var(--card-bg) 0%, #fff 100%);
+  padding: 64px 72px;
+  border-radius: 20px;
+  box-shadow: 0 14px 40px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+}
+
+/* main title */
+.title {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  color: #777777;
+  font-size: 36px;
+  letter-spacing: -0.2px;
+}
+
+/* section group */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 75%;
+  margin-left: 11%;
+  margin-top: 30px;
+}
+
+/* section heading */
+.section-title {
+  margin: 0;
+  color: #92959E;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 8px;
+}
+
+/* section header */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+
+}
+
+/* add another courses button */
+.add-btn {
+
+  white-space: nowrap;
+  font-size: 13px;
+  margin-bottom: 2px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fff;
+  color: #198754;
+  cursor: pointer;
+  /*box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);*/
+  box-shadow:
+    0px 4px 12px rgba(0, 0, 0, 0.04),
+    0px 10px 32px rgba(0, 0, 0, 0.06),
+    0px 20px 48px rgba(0, 0, 0, 0.04);
+}
+
+/* input wrapper */
+.input-wrap {
+  width: 100%;
+}
+
+/* input/select */
+.input-box {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  padding: 10px 46px 14px 16px;
+  font-size: 14px;
+  color: #c9c9c9;
+  background: #f5f5f5;
+  border: 1px solid #D8D8D8;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color .12s, box-shadow .12s;
+  background-image: linear-gradient(45deg, transparent 50%, #cfcfcf 50%),
+    linear-gradient(135deg, #cfcfcf 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(50% - 4px),
+    calc(100% - 14px) calc(50% - 4px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+
+/*  CSS PLACEHOLDER & SELECT TEXT CONTROL  */
+
+/*  placeholder text light grey */
+input::placeholder {
+  color: #c9c9c9 !important;
+}
+
+/* User-typed text  black */
+input {
+  color: #000 !important;
+}
+
+/*  Select default text (placeholder/empty value) = light grey */
+select {
+  color: #c9c9c9 !important;
+}
+
+/*  The placeholder option specifically */
+select option[value=""] {
+  color: #c9c9c9 !important;
+}
+
+/*  When ANY non-empty option is selected → text becomes black */
+select:has(option:checked:not([value=""])) {
+  color: #000 !important;
+}
+
+
+/**/
+
+
+.input-box:focus {
+  border-color: rgba(11, 128, 64, 0.18);
+  box-shadow: 0 0 0 4px rgba(11, 128, 64, 0.04);
+}
+
+/* batch row */
+.batch-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.batch-select {
+  flex: 1 1 auto;
+}
+
+.create-batch {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #198754;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  /* underline  */
+  margin-right: 4px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* enroll button */
+.center-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.enroll-btn {
+  background: #198754;
+  color: #fff;
+  border: none;
+  padding: 13px 75px;
+  border-radius: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(11, 128, 64, 0.16);
+}
+
+/* ---------------- RESPONSIVENESS ---------------- */
+
+/* Tablet */
+@media (max-width: 980px) {
+  .enroll-card {
+    max-width: 860px;
+    padding: 48px 40px;
+    border-radius: 18px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .enroll-btn {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .enroll-card {
+    max-width: 520px;
+    padding: 24px 16px;
+    gap: 18px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  /*  No wrapping*/
+  .section-title {
+    font-size: clamp(12px, 3.5vw, 16px);
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .add-btn {
+    font-size: 11px;
+    padding: 6px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .input-box {
+    padding: 12px 36px 12px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .create-batch {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+
+  .enroll-btn {
+    padding: 12px 44px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  /* modal */
+  .modal-content {
+    width: 90%;
+    padding: 24px 16px;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 380px) {
+  .enroll-card {
+    padding: 20px 12px;
+  }
+
+  .section-title {
+    font-size: 13px;
+  }
+
+  .add-btn {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+}
+
+/* Small height screens */
+@media (max-height: 640px) {
+  .enroll-card {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .enroll-btn {
+    padding: 10px 36px;
+  }
+}
+
+/* ---------------- MODAL ---------------- */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  width: 95%;
+  max-width: 500px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #2b2f31;
+}
+
+.modal-field {
+  margin-bottom: 16px;
+}
+
+.modal-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #4a4a4a;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.modal-input:focus {
+  border-color: var(--green);
+}
+
+.days-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.day-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.modal-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid #ddd;
+  color: #666;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.create-btn {
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.batch-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-batch-link-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4px;
+}
+
+/* delete button */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: rgba(220, 53, 69, 0.5);
+  /* Faded text color */
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.2s;
+  margin-bottom: 2px;
+}
+
+.delete-btn:hover {
+  background: transparent;
+  color: rgba(220, 53, 69, 0.9);
+  /* Darker on hover */
+}

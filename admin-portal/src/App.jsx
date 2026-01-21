@@ -6,7 +6,7 @@ import Overview from "./components/Overview/Overview";
 import Courses from "./components/Courses/Courses";
 import Students from "./components/Student/Students";
 import Instructors from "./components/Instructor/Instructors";
-import EnrollStudents from "./components/EnrollStudent/EnrollStudents";
+import EnrollStudents from "./components/EnrollStudent/EnrollStudent";
 import SyncFromZen from "./components/SyncFormZen/SyncFromZen";
 import ApproveUser from "./components/ApproveUser/ApproveUser";
 import CourseBuilder from "./components/CourseBuilder/CourseBuilder";
